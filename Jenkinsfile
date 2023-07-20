@@ -19,15 +19,16 @@ pipeline {
                  stage('Build') {
                           steps {
                               echo 'Building now!'
-                              sh 'ls -liah'
+                              sh 'gcc helloworld.c -o helloworld'
                               sh 'cat helloworld.c'
                           }
                  }
-                 stage('Push') {
+                 stage('Testing App') {
                           steps {
-                                echo "App is being pushed to artifact storage"
+                                echo "Running final tests"
                                 sh 'ls -liah'
                                 sh 'cat helloworld.c'
+                                sh './helloworld'
                            }  
                   }
          }
