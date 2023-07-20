@@ -9,6 +9,7 @@ pipeline {
                           steps {
                               echo 'Starting pre-build!'
                               sh 'cat helloworld.c'
+                              sh 'sleep 10'
                           }
                  }
                  stage('Lint') {
