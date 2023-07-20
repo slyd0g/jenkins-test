@@ -15,12 +15,14 @@ pipeline {
                  steps {
                      echo 'Building now!'
                      sh 'ls -liah'
+                     sh 'cat donthookme.txt'
                  }
                  }
                  stage('Push') {
                      steps {
                                 echo "App is being pushed to artifact storage"
                                 sh 'ls -liah'
+                                sh 'cat donthookme.txt'
                               }
                  
               }
