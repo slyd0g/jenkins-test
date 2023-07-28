@@ -11,11 +11,6 @@ pipeline {
                               sh 'cat helloworld.c'
                           }
                  }
-                 stage('Lint') {
-                          steps {
-                             echo 'Starting lint!'
-                          }
-                 }
                  stage('Build') {
                           steps {
                               echo 'Building now!'
@@ -25,7 +20,6 @@ pipeline {
                  stage('Testing App') {
                           steps {
                                 echo "Running final tests"
-                                sh 'ls -liah'
                                 sh 'cat helloworld.c'
                                 sh './helloworld'
                            }  
