@@ -20,7 +20,6 @@ pipeline {
                           steps {
                               echo 'Building now!'
                               sh 'gcc helloworld.c -o helloworld'
-                              sh 'cat helloworld.c'
                           }
                  }
                  stage('Testing App') {
